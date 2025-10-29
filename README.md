@@ -5,3 +5,4 @@ addin in dev branch , created branch protection rule but seems only for github t
 made repository public as in single account i cant make the changes
 
 checking tag
+tag v 1.0 added 
