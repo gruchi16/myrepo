@@ -7,7 +7,7 @@ pipeline {
                 echo 'Hello my World'
 
                 echo "Build number is ${env.BUILD_NUMBER}"
-                echo "Build number is ${env.GIT_T}"
+                echo "Build number is ${env.GIT_TAG}"
             }
         }
 
