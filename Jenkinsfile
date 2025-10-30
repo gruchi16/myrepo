@@ -1,6 +1,9 @@
 pipeline {
     agent any
-
+    parameters {
+        string(name: 'version', defaultValue: '1.0.0', description: 'App version')
+       
+    }
     stages {
         stage('Hello') {
             steps {
@@ -30,6 +33,12 @@ pipeline {
             steps {
                 echo "Using Git Tag: ${env.GIT_TAG}"
                 // You can use this tag in build, deploy, etc.
+            }
+        }
+
+         stage('print the parameter') {
+            steps {
+                echo "VERSION: ${params.version}"
             }
         }
 
