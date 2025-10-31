@@ -63,7 +63,10 @@ pipeline {
                 script {
                     emailext (
                         subject: "Test Email from Jenkins",
-                        body: "This is a test email sent from the Jenkins pipeline.",
+                        body: """   Build completed successfully.
+                                    View build details: ${env.BUILD_URL}
+                                    Please approve.""",
+                        
                         from: "gruchi16@gmail.com",
                           replyTo: "gruchi16@gmail.com",
                         to: "gruchi16@gmail.com"
