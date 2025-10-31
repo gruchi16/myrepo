@@ -11,7 +11,7 @@ pipeline {
             steps {
                 script {
                     // Make sure docker-compose.yml is in the workspace
-                    sh 'docker-compose -f jenkinsfile_dockercompose up -d'
+                    sh 'docker-compose -f   Jenkinsfile_dockercompose up -d'
                 }
             }
         }
