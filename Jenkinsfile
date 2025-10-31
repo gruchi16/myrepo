@@ -43,20 +43,7 @@ pipeline {
         }
 
          stage('Approval') {
-            steps {
-                script {
-                    def userInput = input(
-                        id: 'Approval', message: 'Do you want to proceed to deployment?',
-                        parameters: [
-                            choice(name: 'Proceed', choices: ['Yes', 'No'], description: 'Select Yes to continue')
-                        ]
-                    )
-                    if (userInput == 'No') {
-                        error("Deployment aborted by user.")
-                    }
-                }
-            }
-        }
+         
 
         stage('Email Test') {
             steps {
@@ -74,6 +61,19 @@ pipeline {
                 }
             }
         }
-
+   steps {
+                script {
+                    def userInput = input(
+                        id: 'Approval', message: 'Do you want to proceed to deployment?',
+                        parameters: [
+                            choice(name: 'Proceed', choices: ['Yes', 'No'], description: 'Select Yes to continue')
+                        ]
+                    )
+                    if (userInput == 'No') {
+                        error("Deployment aborted by user.")
+                    }
+                }
+            }
+        }
 }
 }
