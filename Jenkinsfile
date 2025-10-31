@@ -69,7 +69,7 @@ pipeline {
                         
                         from: "gruchi16@gmail.com",
                           replyTo: "gruchi16@gmail.com",
-                        to: "gruchi16@gmail.com"
+                        to: "vipin.agrawal02@gmail.com"
                     )
                 }
             }
