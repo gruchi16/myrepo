@@ -42,7 +42,7 @@ pipeline {
             }
         }
 
-         stage('Approval') {
+      
          
 
         stage('Email Test') {
@@ -61,7 +61,8 @@ pipeline {
                 }
             }
         }
-   steps {
+   stage('Approval') {
+        steps {
                 script {
                     def userInput = input(
                         id: 'Approval', message: 'Do you want to proceed to deployment?',
