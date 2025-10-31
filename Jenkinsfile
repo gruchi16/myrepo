@@ -56,7 +56,7 @@ pipeline {
                         
                         from: "gruchi16@gmail.com",
                           replyTo: "gruchi16@gmail.com",
-                        to: "vipin.agrawal02@gmail.com"
+                        to: "gruchi16@gmail.com"
                     )
                 }
             }
@@ -69,6 +69,8 @@ pipeline {
                         parameters: [
                             choice(name: 'Proceed', choices: ['Yes', 'No'], description: 'Select Yes to continue')
                         ]
+                        submitter: 'vipin',
+                        submitterParameter: 'approvedBy'
                     )
                     if (userInput == 'No') {
                         error("Deployment aborted by user.")
