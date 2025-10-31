@@ -1,8 +1,2 @@
-# myrepo
-first time i m adding to check pull mregre
-adding in dev branch now
-addin in dev branch , created branch protection rule but seems only for github team
-made repository public as in single account i cant make the changes
-
-checking tag
-tag v 1.0 added 
+# myrepofor Jenkins File
+Created Jenkins file  for trying Jenkins Stages
