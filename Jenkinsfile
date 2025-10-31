@@ -68,7 +68,7 @@ pipeline {
                         id: 'Approval', message: 'Do you want to proceed to deployment?',
                         parameters: [
                             choice(name: 'Proceed', choices: ['Yes', 'No'], description: 'Select Yes to continue')
-                        ]
+                        ],
                         submitter: 'vipin',
                         submitterParameter: 'approvedBy'
                     )
