@@ -7,14 +7,7 @@ pipeline {
     stages {
 
 
-         stage('Run Docker Compose') {
-            steps {
-                script {
-                    // Make sure docker-compose.yml is in the workspace
-                    sh 'docker-compose -f   Jenkinsfile_dockercompose up -d'
-                }
-            }
-        }
+        
         stage('Hello') {
             steps {
                 echo 'Hello my World'
